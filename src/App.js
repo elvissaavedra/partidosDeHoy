@@ -1,10 +1,10 @@
 import React from 'react';
-import { League } from './pages/League';
+import { PageLeague } from './pages/PageLeague';
 
 function App() {
   return (
     <>
-      <League />
+      <PageLeague />
     </>
   );
 }

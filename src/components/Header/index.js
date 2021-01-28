@@ -2,24 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const WrapperStatic = styled.div`
-  margin: auto;
+  margin: 0 auto;
   max-width: 1000px;
   width: 100%;
   font-family: roboto;
   h1 {
     font-size: 36px;
+    line-height: 38px;
     font-weight: 700;
-    margin: 42px 0px 20px;
   }
   p {
     font-size: 16px;
     font-weight: 700;
-    width: 60vw;
-    margin-bottom: 27px;
   }
 `;
 
-export const Static = () => {
+export const Header = () => {
   return (
     <WrapperStatic>
       <h1>Agenda Deportiva Futbol&iacute;stica </h1>
