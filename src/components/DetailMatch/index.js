@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ContentDetail = styled.div`
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-rows: repeat(2, 1fr);
