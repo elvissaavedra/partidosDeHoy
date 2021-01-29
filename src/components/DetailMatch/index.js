@@ -9,8 +9,12 @@ const ContentDetail = styled.div`
   grid-template-columns: 15% 85%;
   grid-template-rows: repeat(2, 1fr);
   border-bottom: 2px solid #e5e5e5;
+  @media only screen and (max-width: 500px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 45px 60px 117px;
+    justify-content: center;
+  }
 `;
-
 const ContentHours = styled.div`
   display: grid;
   grid-area: 1 / 1 / 3 / 2;
@@ -22,8 +26,12 @@ const ContentHours = styled.div`
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
+  @media only screen and (max-width: 500px) {
+    grid-area: 1/1;
+    justify-items: start;
+    margin-left: 18px;
+  }
 `;
-
 const ContentScore = styled.div`
   display: grid;
   grid-template-columns: 40% 20% 40%;
@@ -31,10 +39,28 @@ const ContentScore = styled.div`
   justify-content: space-around;
   background-color: #fafafa;
   width: 100%;
+  .opposingTeam {
+    flex-direction: row-reverse;
+    & > img {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    grid-area: 2/1;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 90%;
+    margin: 0 auto;
+    .opposingTeam {
+      & > img {
+        margin-left: 10px;
+      }
+    }
+  }
 `;
-
 const Equip = styled.div`
   display: flex;
+  flex-direction: row;
   align-items: center;
   padding: 0 15px;
   & > img {
@@ -48,7 +74,22 @@ const Equip = styled.div`
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
+    /* white-space: nowrap; */
+    /* text-overflow: initial; */
+    /* overflow: hidden; */
   }
+  @media only screen and (max-width: 500px) {
+    padding: 0 5px;
+    & > div {
+      width: 50px;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+    }
+    & > img {
+      margin-right: 10px;
+    }
+  } ;
 `;
 const Score = styled.div`
   display: flex;
@@ -61,12 +102,15 @@ const Score = styled.div`
     color: #fff;
     text-align: center;
     vertical-align: middle;
+    font-family: roboto;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
   }
   .line-right {
     border-right: 2px solid #404040;
   }
 `;
-
 const ContentNotice = styled.div`
   display: grid;
   grid-area: 2 / 2 / 3 / 3;
@@ -77,6 +121,10 @@ const ContentNotice = styled.div`
     font-weight: 400;
     color: #404040;
     text-decoration: underline;
+  }
+  @media only screen and (max-width: 500px) {
+    grid-area: 3/1;
+    width: 100%;
   }
 `;
 
@@ -93,7 +141,7 @@ export const DetailMatch = () => {
           <div className="line-right">1</div>
           <div>3</div>
         </Score>
-        <Equip>
+        <Equip className="opposingTeam">
           <img src="./image/cristal.png" />
           <div>Sporting Cristal</div>
         </Equip>

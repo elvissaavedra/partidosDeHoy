@@ -27,6 +27,16 @@ const WrapperStatic = styled.div`
     font-weight: 700;
     margin-bottom: 30px;
   }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 26px;
+      line-height: 28px;
+      width: 56vw;
+    }
+    p {
+      width: 86vw;
+    }
+  }
 `;
 
 let currentDay = new Date();
